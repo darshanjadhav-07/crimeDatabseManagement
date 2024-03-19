@@ -1,0 +1,52 @@
+<%-include("./partials/header.ejs")-%>
+<div class="image dataScucessImage"></div>
+<% if(message.success){ %>
+    <div id="success-mess">
+        <p><%=message.success%></p>
+    </div>`
+<%}%> 
+<div class="containerSucces">
+    <div class="dataScucess">
+        <div class="dataScucessChildmain">
+            <a href="/searchCriminal">
+                <div class="dataScucessChild" id="sno"> 
+                </div>
+                <div id="innerCardText">
+                    <h3>Search by criminal number</h3>
+                </div>
+            </a>
+        </div>
+        <div class="dataScucessChildmain">
+            <a href="/searchByLoc">
+                <div class="dataScucessChild" id="loc"> 
+                </div>
+                <div id="innerCardText">
+                    <h3>Search by City</h3>
+                </div>
+            </a>
+        </div>
+        <div class="dataScucessChildmain">
+            <a href="/viewAll">
+                <div class="dataScucessChild" id="li"> 
+                </div>
+                <div id="innerCardText">
+                    <h3>List the Criminals</h3>
+                </div>
+            </a>
+        </div>
+        <div class="dataScucessChildmain">
+            <a href="/searchAgent">
+                <div class="dataScucessChild" id="ag"> 
+                </div>
+                <div id="innerCardText">
+                    <h3>Agents Info</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+  
+</body>
+
+
+ 

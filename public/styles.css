@@ -1,0 +1,788 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    overflow: hidden;
+
+}
+html { overflow-y: auto;}
+.image{   
+    background-size: 100% 100%;
+    position: absolute;
+    filter: blur(4px); 
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.prisinorImage{
+    background: url(./images/crminalback.jpg) ;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-size: 100% 100%;
+    position: absolute;
+    filter: blur(5px);
+}
+
+.gunimage{
+    background: url(./images/pxfuel.jpg) ; 
+}
+
+.emergency{
+    background: url(./images/hackerImage.jpg) ;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-size: 100% 100%;
+    position: absolute;
+}
+.accessDetain{
+    background: url(./images/2134457.jpg);
+    background-size: 100% 100%;
+    position: absolute;
+    /* filter: blur(4px);  */
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    
+}
+
+.outerContainererror{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Containererror{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border:2px solid yellow; */
+    flex-direction: column;
+}
+
+.Containererror a{
+    /* border:2px solid black; */
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #ffc107;
+    color:black;
+    text-decoration: none;
+    font-weight: bolder;
+    height: 50px;
+    padding: 10px;
+}
+
+.Containererror a:hover{
+   background-color: transparent;
+   color: white;
+   border:1px solid transparent;
+   border-radius: 50%;
+   width: 50%;
+   transition:ease-in-out 1.5s;
+}
+
+.hackerContainer h1{
+    text-align: center;
+    color:#FF671F;
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px;
+    /* border: 2px solid wheat;
+    font-size: 4rem; */
+}
+
+.navbar{
+    border-radius: 50px;
+    z-index: 1;
+}
+
+.emergencyContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* #hackerivitation{
+    width: 100%;
+    border: 2px solid wheat;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+} */
+.hackerContainer h1{
+    font-size: 7rem;
+}
+.mainContainer,.loginContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    background-color:#ffc107;
+    z-index: -1;
+}
+
+.navInput{
+    background-color: aliceblue;
+}
+
+
+
+.mainContainer #enter{
+    width: 500px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    border:2px solid white;
+    border-radius: 8px;
+}
+
+.mainContainer div h1{
+    color:white;
+    font-size: 6rem;
+    /* border: 1px solid white; */
+}
+
+.mainContainer div p a{
+    color:black;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 2px;
+}
+.mainContainer div p{
+    margin-top: 20px;
+    /* border: 0.5px solid white; */
+    padding: 4px;
+    border-radius: 5px;
+    background-color: #ffc107;
+    width: 60%;
+    text-align: center;
+}
+
+.homenav li a{
+    font-size: 1.3rem;
+}
+
+/* DatabaseForm */
+
+
+.DatabaseFormImage{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: url(../public/images/peakpx.jpg);
+    background-size: 100% 100%;
+    filter: blur(5px);
+    z-index: -1;
+
+}
+
+#DatabaseFormH1{
+    color:white;
+    text-align: center;
+    margin:10px;
+    padding: 10px;
+}
+
+.DatabaseForm{
+    width:100%;
+    /* border: 1px solid white; */
+    display: flex;    
+    color:white;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.DatabaseForm form{
+    width:500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-content: center; */
+    /* border: 2px solid white; */
+}
+
+.DatabaseForm form input,textarea{
+    width: 100%;
+    border-radius: 5px;
+    background-color: #ffc107;
+    padding: 8px; 
+}
+
+.DatabaseForm input:focus{
+    border:2px solid red;
+}
+.DatabaseForm form input{
+    height:30px;
+    border: none;
+}
+
+.DatabaseForm form button{
+    width: 55%;
+    height: 40px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffc107;
+}
+
+.mainContainer input:focus{
+border:3px solid blue;
+background-color: #ffc107;
+}
+
+.mainContainer input{
+    border: 3px solid red;
+    width: 100%;
+    outline: none;
+}
+
+.mainContainer input{
+    height: 40px;
+}
+
+.dataScucess{
+    margin-top: 50px;
+    width: 70%;
+    height: 100%;
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color:white;
+    /* flex-direction: column; */
+    font-size: 2rem;
+    border-radius: 50px;
+    flex-wrap: wrap;
+}
+
+.dataScucessChild{
+    width: 400px;
+    height: 200px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    transition:all 0.5s ease-in-out;
+}
+
+.dataScucess a{
+    text-decoration: none;
+    color: black;
+}
+
+#sno{
+    background: url("./images/1901.jpg") no-repeat;
+    background-size:cover;
+}
+#sno:hover{
+    filter:blur(0.5px);
+}
+.dataScucessChild:hover{
+    width: 450px;
+    height: 250px;
+}
+#loc{
+    background: url("./images/location.jpg") no-repeat;
+    background-size:cover;
+}
+#li{
+    background: url("./images/criminalQueue.jpg") no-repeat;
+    background-size:cover;
+}
+#ag{
+    background: url("./images/Agents.jpg") no-repeat;
+    background-size:cover;
+}
+
+.dataScucessChildmain{
+    background-color: #ffffff;
+    border-radius: 15px;
+    height: 250px;
+    text-align: center;
+}
+
+/* .dataScucessChildmain:hover{
+    height: 275px;
+    transition:all 0.5s ease-in-out;
+} */
+
+#innerCardText{
+    margin-top: 5px;
+}
+
+.dataScucess p{
+    width: 70%;
+    /* border: 2px solid white; */
+    height: 50px;
+    background-color: #ffc107;
+    text-align: center;
+    border-radius: 50px;transition: ease-in-out 1s;
+}
+
+.dataScucess p:hover{
+    opacity:0.9;
+    color:white;
+    width:60%;
+    height:49px;
+    transition: ease-in-out 1s;
+}
+
+.dataScucessImage{
+    background: url(../public/images/wp2347562-database-wallpapers.jpg);
+    background-size: 100% 100%;
+    position: absolute;
+    filter: blur(4px); 
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.searchCriminal{
+    background: url(../public/images/scott-rodgerson-ffH_GkINfyY-unsplash.jpg);
+    background-size: 100% 100%;
+    position: absolute;
+    filter: blur(4px); 
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.containerSearch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.containerSearch form{
+    color:white;
+    display: flex;
+    justify-content:space-around;
+    flex-direction: column;
+    /* border: 2px solid white; */
+    width: 600px;
+    height: 200px;
+    /* background-color: #ffc107; */
+    text-align: center;
+    padding: 20px;
+    align-items: center;
+
+}
+
+.innerContainerSerach #serchTitle{
+    font-size: 3rem;
+    /* background-color: #ffc107; */
+    color: white;
+    width: 100%;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.innerContainerSerach{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.containerSearch form input{
+    width: 80%;
+    height: 100%;
+    outline: none;
+    padding: 20px;
+    border: none;
+}
+
+.inputdiv{
+   width: 85%;
+   height: 40px;
+   display: flex;
+   justify-content: space-evenly;
+   /* border: 2px solid black; */
+   align-items: center;
+   background-color: white;
+   border-radius: 50px;
+   /* margin-bottom: 20px; */
+}
+.inputdiv svg{
+    color:black;
+}
+
+.containerSearch form button{
+    width: 30%;
+    height: 35px;
+    border: none;
+    background-color: #103cff;
+    color:rgb(255, 255, 255);
+    border-radius: 50px;
+    font-size: 1.2rem;
+    
+}
+
+.containerSucces{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    flex-direction: column;
+    margin-top: 70px;
+
+}
+
+.dataScucess input{
+    outline: none;
+    border: 2px solid black;
+    -moz-appearance: textfield;
+}
+
+
+.dataScucess,.containerSearch form input::-webkit-outer-spin-button,
+.dataScucess,.containerSearch form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* Enter */
+
+.loginContainer form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 425px;
+    height: 370px;
+    text-align: center;
+    border: 2px solid whitesmoke;
+    color: white;
+    border-radius: 20px;
+}
+
+.loginContainer form input,.loginContainer form button{
+    height: 37px;
+    border-radius: 50px;
+    width: 65%;   
+    background-color: #ffc107;
+    font-size: 1.4rem;
+}
+
+.loginContainer form input{
+    width: 100%;
+    background: transparent;
+    border:2px solid white;
+    color:white;
+    padding: 10px;
+}
+.loginContainer form input:focus{
+    outline: 1px solid white;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid white; */
+    width: 65%;
+    height: 140px;
+    justify-content:space-around;
+    align-items: flex-start;
+}
+
+
+.loginContainer form h1{
+    color:white;
+}
+
+.bi-shield-lock-fill{
+    color:#ffc107;
+}
+
+
+/* view criminal details */
+
+.mainPrisinorContainer{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#h1Ofview{
+    font-size: 2rem;
+    text-align: center;
+    color:rgb(0, 0, 0);
+    padding: 20px;
+    background-color: #ffffff;
+    /* border-radius: 50px; */
+    /* display: block; */
+    /* width: 300px; */
+}
+
+
+.innerPrisinorContainer{
+    width: 700px;
+    height: 50%;
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.innerCard{
+    display: flex;
+    justify-content:flex-start;
+    border:2px solid black;
+    border-radius: 50px;
+    width: 100%;text-align: center;
+    background-color: #ffffff;
+}
+
+.innerCard p{
+    display: flex;
+    justify-content: space-around;
+    width: 350px;
+    text-align: center;
+    padding: 2px;
+}
+
+.innerCard label{
+    border:2px solid #ffc107;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 350px;
+    background-color:#ffc107;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+/* .enterText:invalid{
+    border: 2px solid red;
+} */
+
+/* input:focus:invalid {
+    background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% lightsalmon;
+    background-size: 25px;
+    background-color: #ffffff;
+  } */
+
+
+  /* Profile div */
+
+  .profile{
+    width:0;
+    height: 100%;
+    background-color: #ffffff;
+    z-index:-1;
+    position: absolute;
+    right:0;
+    top:88px;
+    border-radius:10px;
+   animation-name: profilAni;
+   animation-duration: 0.1s;
+   animation-timing-function: ease-in;
+   animation-fill-mode: forwards;
+   color:black;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   /* align-items: center; */
+  }
+
+
+  @keyframes profilAni {
+    from{
+        width:0%;
+    }
+    to{
+        width:25%;
+    }
+  }
+
+.innerProfil,.innerProfil2{
+    background-color: #000000;
+    width: 50px;
+    height: 50px;
+}
+
+.profilePic img{
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+/* navButton */
+
+#navBtn{
+    width: 70px;
+    height: 30px;
+    background-color:#ffc107;
+    color: #000000;
+    border-radius: 15px;
+    margin-top: 4px;
+}
+
+.btnClick{
+    width: 65px;
+    height: 25px;
+    background-color: #ffffff;
+}
+
+.active{
+    font-size: 1.5rem;
+}
+
+
+/* success message box */
+
+#success-mess{
+    width:100%;
+    height: 70px;
+    background-color: rgb(190, 255, 190);
+    border: 2px solid rgb(190, 255, 190);
+    color:green;
+}
+
+#error-mess{
+    width:100%;
+    height: 50px; 
+    background-color: rgb(255, 151, 151);
+    border: 2px solid rgb(255, 151, 151);
+    color:rgb(128, 0, 0);
+}
+
+#error-mess p{
+    text-align: center;
+    
+}
+
+#success-mess,#error-mess{
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+
+/* view by city */
+
+.viewByCityMainContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 2px solid white; */
+    color:white;
+    flex-direction: column;
+}
+
+.viewByCityInnerContainer h2{
+    width: 100%;
+    text-align: center;
+    color: #000000;
+    background-color:#ffffff;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.viewByCityInnerContainer h2 p{
+    display: inline;
+}
+
+.viewByCityInnerContainer{
+    width: 500px;
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.viewByCityInnerContainer table,th,td,tr{
+    border: 2px solid white;
+    width:500px;
+    text-align: center;
+    background-color:#ffc107;
+    color:#000000;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+#crNo{
+    width:300px;
+    border-radius: 15px;
+}
+
+.cityCard{
+  width: 70%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid white; */
+  align-items: center;
+}
+
+.viewAllMainContainer{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    border: 2px solid rgb(135, 0, 0);
+    align-items:center;
+}
+.viewAllMainContainer table{
+    border: 2px solid white;
+    width:100%;
+    text-align: center;
+    background-color:#ffc107;
+    color:#000000;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+/* .viewAllMainContainer table tr,td,th{
+    width: 1000px;
+} */
+
+.AgentsImage{
+    background: url(./images/Agents.jpg) ;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-size: 100% 100%;
+    position: absolute;
+
+}

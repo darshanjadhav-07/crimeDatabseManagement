@@ -1,0 +1,56 @@
+<%-include("./partials/header.ejs")-%> <%-include("navbar.ejs")-%>
+<div class="DatabaseFormImage"></div>
+<h1 id="DatabaseFormH1">Enter Criminal details</h1>
+<div class="DatabaseForm">
+  <% if(message.error){ %>
+  <div id="error-mess">
+    <p><%=message.error%></p>
+  </div>
+  <%}%>
+  <form action="/DatabaseForm" method="post">
+    <label
+      >Fname:<input type="text" autocomplete="off" name="fname" placeholder="first name" required
+    /></label>
+    <label
+      >Lname:<input type="text" autocomplete="off" name="lname" placeholder="last name" required
+    /></label>
+    <label
+      >Phone:<input
+        id="phoneId"
+        type="number"
+        name="phone"
+        value=""
+        placeholder="+91"
+        autocomplete="off"
+        required
+    /></label>
+    <label
+      >criminal no: ( length 4 )<input
+        id="criminlaNoId"
+        type="number"
+        name="criminal_no"
+        placeholder="criminal number"
+        autocomplete="off"
+        required
+    /></label>
+    <label
+      >Location:<textarea
+        cols="10px"
+        rows="2px"
+        name="location"
+        placeholder="Location"
+        autocomplete="off"
+        required
+      ></textarea>
+    </label>
+    <button type="submit" id="criminalInfoBtn">Next Page</button>
+  </form>
+  <div id="main" class="profile">
+    <div class="profilePic">
+      <img src="<%=pic%>" />
+    </div>
+    <div class="innerProfileContainer">
+      <h2><%=officer%></h2>
+    </div>
+  </div>
+</div>

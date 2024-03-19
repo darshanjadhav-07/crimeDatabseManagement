@@ -1,0 +1,21 @@
+<%-include("./partials/header.ejs")-%>
+<div class="prisinorImage"></div>
+<div class="viewByCityMainContainer">
+    <div class="viewByCityInnerContainer">
+        <h2>city: <p><%=loc%></p></h2>
+        <table>
+            <thead>
+                <th>criminal no</th>
+                <th>criminal first name</th>
+                <th>criminal last name</th>    
+            </thead>
+            <%arrayCity.forEach((item)=>{%>
+                <tr>
+                    <td><%=item.criminal_no%></td>
+                    <td><%=item.fname%></td>
+                    <td><%=item.lname%></td>
+                </tr>
+            <%})%>
+        </table>
+    </div>
+</div>

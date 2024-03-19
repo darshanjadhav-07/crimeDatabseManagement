@@ -1,0 +1,24 @@
+<%-include("./partials/header.ejs")-%>
+<div class="prisinorImage"></div>
+<div class="viewAllMainContainer">
+    <div class="cityCard">
+       <table>
+            <thead>
+                <th>cri No</th>
+                <th>fname</th>
+                <th>lname</th>
+                <th>phone</th>
+                <th>location</th>
+            </thead>
+                <%mainAllData.forEach((item)=>{%>
+                    <tr>
+                        <td><%=item.criminalno%></td>
+                        <td><%=item.fname%></td>
+                        <td><%=item.lname%></td>
+                        <td><%=item.phone%></td>
+                        <td><%=item.location%></td>
+                <%})%>       
+                    </tr>            
+       </table>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<%-include("./partials/header.ejs")-%>
+<div class="prisinorImage"></div>
+<h1 id="h1Ofview">Criminal No: <%=criminal_no%></h1>
+<div class="mainPrisinorContainer">
+  <div class="innerPrisinorContainer card1">
+    <div class="innerCard">
+      <label>name:</label>
+      <p><%=fname%></p>
+    </div>
+    <div class="innerCard">
+      <label>Last name:</label>
+      <p><%=lname%></p>
+    </div>
+    <div class="innerCard">
+      <label>Phone:</label>
+      <p><%=phone%></p>
+    </div>
+    <div class="innerCard">
+      <label>Address:</label>
+      <p><%=location%></p>
+    </div>
+  </div>
+  <div class="innerPrisinorContainer card2">
+    <div class="innerCard">
+      <label>crime Type:</label>
+      <p><%=crime_type%></p>
+    </div>
+    <div class="innerCard">
+      <label>crime description:</label>
+      <p><%=crime_description%></p>
+    </div>
+    <div class="innerCard">
+      <label>Punished on:</label>
+      <p><%=punished_on%></p>
+    </div>
+    <div class="innerCard">
+      <label>Prison period:</label>
+      <p><%=persion_period%></p>
+    </div>
+    <div class="innerCard">
+      <label>Prison location:</label>
+      <p><%=Presion_location%></p>
+    </div>
+  </div>
+</div>

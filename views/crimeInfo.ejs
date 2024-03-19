@@ -1,0 +1,82 @@
+<%-include("./partials/header.ejs")-%> <%-include("navbar.ejs")-%>
+<div class="DatabaseFormImage"></div>
+<h1 id="DatabaseFormH1">Enter Criminal details</h1>
+<div class="DatabaseForm">
+  <% if(message.error){ %>
+    <div id="error-mess">
+      <p><%=message.error%></p>
+    </div>
+    <%}%>
+  <form action="/crimeInfo" method="post" id="crimeInfoFrom">
+    <label
+      >Crime No:
+      <input
+        class="criminalInfoClass"
+        id="criminalInfoId"
+        autofocus
+        type="number"
+        name="crime_no"
+        required
+        autocomplete="off"
+      />
+    </label>
+    <label
+      >Crime Type:<input
+        class="criminalInfoClass"
+        autofocus
+        type="text"
+        name="crime_type"
+        autocomplete="off"
+        required
+    /></label>
+    <label
+      >Crime Description:<textarea
+        class="criminalInfoClass"
+        autofocus
+        cols="10px"
+        rows="2px"
+        name="crime_description"
+        autocomplete="off"
+        required
+      ></textarea>
+    </label>
+    <label
+      >Punished On:<input
+        id="criminalInfoDate"
+        class="criminalInfoClass"
+        autofocus
+        type="date"
+        max="2024-03-17"
+        name="punished_on"
+        autocomplete="off"
+        required
+    /></label>
+    <label
+      >Prison period:<input
+        class="criminalInfoClass"
+        autofocus
+        type="text"
+        name="presion_period"
+        autocomplete="off"
+        required
+    /></label>
+    <label
+      >Criminal jail location:<input
+        class="criminalInfoClass"
+        autofocus
+        type="text"
+        name="criminal_jail_loc"
+        autocomplete="off"
+        required
+    /></label>
+    <button type="submit" id="criminalInfoBtn">submit</button>
+  </form>
+  <div id="main" class="profile">
+    <div class="profilePic">
+      <img src="<%=pic%>" />
+    </div>
+    <div class="innerProfileContainer">
+      <h2><%=officer%></h2>
+    </div>
+  </div>
+</div>
