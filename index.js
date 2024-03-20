@@ -10,12 +10,12 @@ let life = 0;
 var player = require('play-sound')(opts = {})
 let isLogedIn = false;
 
-
 env.config();
 const app = express();
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname));
+
 app.use(session({
     secret: 'secret key',
     resave: false,
@@ -129,7 +129,7 @@ app.post('/DatabaseForm', function (req, res) {
             });
 
         let callNextPage = () => {
-            res.redirect('/dataScucess');
+            res.redirect('/dataSuccess');
         }
 
     });
@@ -294,8 +294,8 @@ app.post('/errorPage', function (req, res) {
     }
 });
 
-app.get('/dataScucess', (req, res) => {
-    res.render('dataScucess', { message: req.flash() });
+app.get('/dataSuccess', (req, res) => {
+    res.render('dataSuccess', { message: req.flash() });
 });
 
 app.get('/searchByLoc', (req, res) => {
