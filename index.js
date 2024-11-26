@@ -1,14 +1,17 @@
-const env = require("dotenv");
 const express = require('express');
+const env = require("dotenv");
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const pg = require('pg');
 const session = require('express-session');
 const flash = require('express-flash');
 const { forEach } = require('lodash');
+const Port = 3000;
 let life = 0;
-var player = require('play-sound')(opts = {})
-let isLogedIn = false;
+var player = require('play-sound')(opts = {});
+
+
+
 
 env.config();
 const app = express();
@@ -22,6 +25,12 @@ app.use(session({
     saveUninitialized: true,
     cookie: { maxAge: 60000 }
 }))
+
+app.use((req, res, next) => {
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+    next();
+  });
+  
 
 app.use(flash());
 
@@ -38,31 +47,47 @@ db.connect();
 let officerName = "Darshan Jadhav"
 let profilePic = "./public/images/p1.jpg";
 
+// let checkOfficer2 = function(req,res,next){
+//     if(req.url == "/DatabaseForm" && req.session.login){
+//         life = 0;
+//     //    isLogedIn = false;
+//        console.log("YOO");
+//     }
+//     else{
+//         console.log("No YOO");
+//     }
+//     next();
+// }
+
+// app.use(checkOfficer2);
 
 app.get('/', function (req, res) {
-    life = 0;
-    isLogedIn = false;
-    res.render("main", { officer: officerName, pic: profilePic });
+    req.session.login = false;
+    res.render("main", {islog:isLogedIn, officer: officerName, pic: profilePic });
 })
 
 app.get('/searchCriminal', function (req, res) {
     res.render("searchCriminal");
 })
 
-app.get('/DatabaseForm', function (req, res) {
-    if (isLogedIn) {
-        isLogedIn = false;
-        res.render("DatabaseForm", { officer: officerName, pic: profilePic, message: req.flash() });
+const isAuthenticated = (req,res,next)=>{
+    if(req.session.login){
+        next();
     }
-    else {
+    else{
         res.redirect("/enter");
     }
+}
+
+let ans = true;
+app.get(`/DatabaseForm`,isAuthenticated,function (req, res) {
+    res.render("DatabaseForm", { officer: officerName, pic: profilePic, message: req.flash() });
+    return;
 })
 
 app.get('/crimeInfo', function (req, res) {
     // console.log(req.flash('success'));
     res.render("crimeInfo", { officer: officerName, pic: profilePic, message: req.flash() });
-
 })
 
 app.get('/enter', function (req, res) {
@@ -137,6 +162,7 @@ app.post('/DatabaseForm', function (req, res) {
 
 app.post('/navbar', function (req, res) {
     isLogedIn = false;
+    req.session.login = false;
     res.redirect('/');
 })
 
@@ -204,6 +230,16 @@ app.get('/emergency', function (req, res) {
     res.render("emergency");
 })
 
+
+// let checkOfficer = function(req,res,next){
+//     if(req.url == "/DatabaseForm" && !req.session.login){
+//         res.redirect("/enter");
+//     }
+//     next();
+// }
+
+// app.use(checkOfficer);
+
 let agentInfo = [];
 app.post('/enter',function(req,res){
     const security_cid = req.body.security_id;
@@ -216,8 +252,6 @@ app.post('/enter',function(req,res){
         if (err) throw err
         }); 
     }
-
-
 
     function redirectSameEnterPage(){
         life++;
@@ -252,6 +286,7 @@ app.post('/enter',function(req,res){
     isAgent.then((value)=>{
         if (value[0][0].securityid == security_cid && value[0][0].securityans == security_cans) {
             isLogedIn = true;
+            req.session.login = true;
             res.redirect('/DatabaseForm');
         }
         else {
@@ -456,6 +491,6 @@ app.get("/searchAgent",function(req,res){
     res.render("searchAgent");
 })
 
-app.listen(3000, function (req, res) {
-    console.log("Serving on port 3000..")
+app.listen(Port,function (req, res) {
+    console.log(`Serving on port ${Port}..`)
 });
